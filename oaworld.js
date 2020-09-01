@@ -9,9 +9,15 @@ class World
       this.handlerTwo = null;
   }
   
+  getPrefix()
+  {
+     $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6em' >From </span>");
+     
+  }
   render()
   {
-    console.log("new world loaded!");
+      this.getPrefix();
+      console.log("new world loaded!");
   }
 }
   
