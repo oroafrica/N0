@@ -18,6 +18,7 @@ class World
             this.handlerOne =  $(tgt)[index];
          }	
       });
+      this.alloySel();
    }
    
   alloySel()
@@ -38,7 +39,6 @@ class World
   render()
   {
       this.getAlloySel();
-      this.alloySel();
       this.getPrefix();
   }
 }
