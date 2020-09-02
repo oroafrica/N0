@@ -29,8 +29,8 @@ class World
   {
      $(document).bind("change",this.handlerOne,()=> 
      {
-        $(". tmp-hold").remove();
-        $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
+        $(".tmp-hold").remove();
+        $(".ty-price").prepend("<span class='ty-price-num tmp-hold' style='font-size:0.6rem' >From </span>");
      });
   }
   getPrefix()
