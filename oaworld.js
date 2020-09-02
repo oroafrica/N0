@@ -25,12 +25,9 @@ class World
   {
      $(document).on("change",this.handlerOne,()=> 
      {
-        console.log(this.handlerOne.options[this.handlerOne.selectedIndex].text);
-//         let x  = this.handlerOne.selectedIndex;
-//         console.log("index: " + this.handlerOne.selectedIndex);
-        
-        //$(".tmp-hold").remove();
-        //$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
+        this.getAlloySel();
+        $(".tmp-hold").remove();
+        $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
      });
   }
   getPrefix()
@@ -39,10 +36,9 @@ class World
   }
   render()
   {
-      this.getAlloySel();
+      //this.getAlloySel();
       this.alloySel();
       this.getPrefix();
-      //console.log("new world loaded!");
   }
 }
   
