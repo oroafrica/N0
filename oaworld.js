@@ -28,7 +28,7 @@ class World
   alloySel()
   {
      //$(this.handlerOne).on("change",()=> {$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");});
-     $(document).on("change",".ty-alloy",()=> {console.log(this.selectedIndex);});
+     $(document).on("change",".ty-alloy",()=> {$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");});
   }
   getPrefix()
   {
