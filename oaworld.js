@@ -27,13 +27,15 @@ class World
    }
   alloySel()
   {
-     //$(this.handlerOne).on("change",()=> {$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");});
-     //$(document).on("change",".ty-alloy",()=> {$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");});
-     $(document).bind("change",this.handlerOne,()=> {$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");});
+     $(document).bind("change",this.handlerOne,()=> 
+     {
+        $(". tmp-hold").remove();
+        $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
+     });
   }
   getPrefix()
   {
-     $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
+     $(".ty-price").prepend("<span class='ty-price-num tmp-hold' style='font-size:0.6rem' >From </span>");
   }
   render()
   {
