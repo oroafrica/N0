@@ -18,6 +18,7 @@ class World
          {
             this.handlerOne =  $(tgt)[index];
             $(this.handlerOne).addClass("ty-alloy");
+            console.log("sel index: " +index);
             //console.log(this.handlerOne.selectedIndex);
             //console.log($(this.handlerOne)[0].prop('selectedIndex'));
          }	
@@ -27,6 +28,7 @@ class World
    }
   alloySel()
   {
+     this.getAlloySel();
      $(document).bind("change",this.handlerOne,()=> 
      {
         $(".tmp-hold").remove();
@@ -39,7 +41,7 @@ class World
   }
   render()
   {
-      this.getAlloySel();
+      //this.getAlloySel();
       this.alloySel();
       this.getPrefix();
       //console.log("new world loaded!");
