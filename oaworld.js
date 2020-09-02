@@ -21,10 +21,13 @@ class World
             //console.log($(this.handlerOne)[0].prop('selectedIndex'));
          }	
       });
+      
+      
    }
    
   getPrefix()
   {
+     $(this.handlerOne).on("change",()=> {$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");});
      $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
   }
   render()
