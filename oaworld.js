@@ -25,7 +25,7 @@ class World
   {
      $(document).on("change",this.handlerOne,()=> 
      {
-         console.log($(this.handlerOne)text());
+         console.log($(this.handlerOne).text());
         //$(".tmp-hold").remove();
         //$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
      });
