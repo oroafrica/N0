@@ -25,7 +25,6 @@ class World
   {
      $(document).on("change",this.handlerOne,()=> 
      {
-        this.getAlloySel();
         $(".tmp-hold").remove();
         $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
      });
@@ -37,7 +36,7 @@ class World
   render()
   {
       //this.getAlloySel();
-      this.alloySel();
+      //this.alloySel();
       this.getPrefix();
   }
 }
