@@ -26,8 +26,8 @@ class World
      $(document).on("change",this.handlerOne,()=> 
      {
         console.log(this.handlerOne.options[this.handlerOne.selectedIndex].text);
-        let x  = this.handlerOne.options[this.handlerOne.selectedIndex];
-        console.log(this.handlerOne.options[this.handlerOne.selectedIndex]);
+        let x  = this.handlerOne.selectedIndex;
+        console.log("index: " + this.handlerOne.selectedIndex);
         
         //$(".tmp-hold").remove();
         //$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
