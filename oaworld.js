@@ -18,19 +18,15 @@ class World
             this.handlerOne =  $(tgt)[index];
          }	
       });
-      
    }
    
   alloySel()
   {
-     this.getAlloySel();
      
      $(document).on("change",this.handlerOne,()=> 
      {
-        
-        
-        var str = $(this.handlerOne).find('option:selected').text();
-         console.log("selected: " + str);
+         this.tgtOne = $(this.handlerOne).find('option:selected').text();
+         console.log("selected: " + this.tgtOne);
         //$(".tmp-hold").remove();
         //$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
      });
@@ -41,7 +37,7 @@ class World
   }
   render()
   {
-//       this.getAlloySel();
+      this.getAlloySel();
       this.alloySel();
       this.getPrefix();
   }
