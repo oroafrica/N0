@@ -17,7 +17,8 @@ class World
          if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Silver")
          {
             this.handlerOne =  $(tgt)[index];
-            console.log($(this.handlerOne)[0].prop('selectedIndex'));
+            console.log(this.handlerOne.selectedIndex);
+            //console.log($(this.handlerOne)[0].prop('selectedIndex'));
          }	
       });
    }
