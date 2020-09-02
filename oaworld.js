@@ -26,8 +26,8 @@ class World
      
      $(document).on("change",this.handlerOne,()=> 
      {
-         this.tgtOne = $(this.handlerOne).find('option:selected').text();
-         console.log("selected: " + this.tgtOne);
+         //this.tgtOne = $(this.handlerOne).find('option:selected').text();
+         console.log("selected: " + $(this.handlerOne).find('option:selected').text());
         //$(".tmp-hold").remove();
         //$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
      });
@@ -36,9 +36,23 @@ class World
   {
      $(".ty-price").prepend("<span class='ty-price-num tmp-hold' style='font-size:0.6rem' >From </span>");
   }
+   
+  init()
+   {
+      var tgt = $('select').toArray();
+      $.each(tgt, (index)=> 
+      {
+         if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Silver")
+         {
+            console.log("indi" + index);
+            this.handlerOne =  $(tgt)[index];
+         }	
+      });
+      this.alloySel();
+   }   
   render()
   {
-      this.getAlloySel();
+      init();
       this.getPrefix();
   }
 }
