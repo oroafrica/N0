@@ -1,4 +1,3 @@
-
 class World
 {
    constructor()
@@ -21,12 +20,14 @@ class World
       });
       
    }
+   
   alloySel()
   {
      $(document).on("change",this.handlerOne,()=> 
      {
-        $(".tmp-hold").remove();
-        $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
+         console.log($(this.handlerOne)[0].text());
+        //$(".tmp-hold").remove();
+        //$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
      });
   }
   getPrefix()
@@ -35,8 +36,8 @@ class World
   }
   render()
   {
-      //this.getAlloySel();
-      //this.alloySel();
+      this.getAlloySel();
+      this.alloySel();
       this.getPrefix();
   }
 }
