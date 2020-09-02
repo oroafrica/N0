@@ -17,22 +17,27 @@ class World
          if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Silver")
          {
             this.handlerOne =  $(tgt)[index];
-            console.log(this.handlerOne.selectedIndex);
+            //console.log(this.handlerOne.selectedIndex);
             //console.log($(this.handlerOne)[0].prop('selectedIndex'));
          }	
       });
       
       
    }
-   
+  alloySel()
+  {
+     //$(this.handlerOne).on("change",()=> {$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");});
+     $(document).on("change",this.handlerOne,()=> {console.log(this.handlerOne.selectedIndex);});
+  }
   getPrefix()
   {
-     $(this.handlerOne).on("change",()=> {$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");});
+     
      $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
   }
   render()
   {
       this.getAlloySel();
+      this.alloySel();
       this.getPrefix();
       //console.log("new world loaded!");
   }
