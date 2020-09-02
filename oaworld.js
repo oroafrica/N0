@@ -23,9 +23,10 @@ class World
    }
   alloySel()
   {
-     $(document).bind("change",this.handlerOne,()=> 
+     $(document).on("change",this.handlerOne,()=> 
      {
         console.log($(this.handlerOne).index());
+        console.log(this.handlerOne.options[this.handlerOne.selectedIndex].text);
         //$(".tmp-hold").remove();
         //$(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
      });
