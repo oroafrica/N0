@@ -52,7 +52,7 @@ class World
    }   
   render()
   {
-      init();
+      this.init();
       this.getPrefix();
   }
 }
