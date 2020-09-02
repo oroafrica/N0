@@ -11,7 +11,7 @@ class World
   
   getPrefix()
   {
-     $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6em' >From </span>");
+     $(".ty-price").prepend("<span class='ty-price-num' style='font-size:0.6rem' >From </span>");
      
   }
   render()
