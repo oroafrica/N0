@@ -49,10 +49,11 @@ class World
          }	
       });
       this.alloySel();
-   }   
+   }
+   
   render()
   {
-      this.init();
+      //this.init();
       this.getPrefix();
   }
 }
